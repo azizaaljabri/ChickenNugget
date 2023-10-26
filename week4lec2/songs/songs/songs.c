@@ -88,5 +88,7 @@ int main()
         counter ++;
 
     }
+    
+    printf("Number of songs: %d", counter);
 
 }
