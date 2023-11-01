@@ -71,13 +71,13 @@ while (fgets(line, buffer_size, input))
         counter ++;
 
         if (counter < 4){
-        printf("%s/%s/%s", date, time, steps);
+        printf("%s/%s/%d\n", date, time, atoi(steps));
         }
 
     }    
     
 
-printf("Number of records in file: %d",counter);
+printf("Number of records in file: %d\n",counter);
 
 fclose(input);
 
