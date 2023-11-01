@@ -70,6 +70,10 @@ while (fgets(line, buffer_size, input))
         data [counter].steps = atoi(steps);
         counter ++;
 
+        if (counter < 4){
+        printf("%s/%s/%s", date, time, steps);
+        }
+
     }    
     
 
