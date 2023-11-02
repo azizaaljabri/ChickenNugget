@@ -77,7 +77,7 @@ while (fgets(line, buffer_size, input))
     }    
     
 
-printf("Number of records in file: %d\n",counter);
+printf("Number of records in file: %d\n", counter);
 
 fclose(input);
 
