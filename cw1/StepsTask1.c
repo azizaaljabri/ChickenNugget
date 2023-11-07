@@ -44,7 +44,7 @@ void tokeniseRecord(const char *input, const char *delimiter,
 // Complete the main function
 int main() {
 
-FITNESS_DATA data [60];
+FITNESS_DATA data [500];
 int buffer_size = 10000;
 char line[buffer_size];
 int counter=0;
@@ -70,6 +70,8 @@ while (fgets(line, buffer_size, input))
         data [counter].steps = atoi(steps);
         counter ++;
 
+        printf("Number of records in file: %d\n", counter);
+        
         if (counter < 4){
         printf("%s/%s/%d\n", date, time, atoi(steps));
         }
@@ -77,7 +79,7 @@ while (fgets(line, buffer_size, input))
     }    
     
 
-printf("Number of records in file: %d\n", counter);
+
 
 fclose(input);
 

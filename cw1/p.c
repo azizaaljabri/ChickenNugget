@@ -43,45 +43,41 @@ void tokeniseRecord(const char *input, const char *delimiter,
 
 // Complete the main function
 int main() {
+    FITNESS_DATA data[500];
+    int buffer_size = 10000;
+    char line[buffer_size];
+    int counter = 0;
 
-FITNESS_DATA data [60];
-int buffer_size = 10000;
-char line[buffer_size];
-int counter=0;
+    FILE *input = fopen("FitnessData_2023.csv", "r");
 
-FILE *input = fopen("FitnessData_2023.csv", "r");
+    if (input == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
 
-if(input == NULL)
-{
-    printf("Error opening file.\n");
-    return 1;
-}
+    char date[11];
+    char time[6];
+    char steps[5000];
 
-char date[11];
-char time[6];
-char steps[5000];
+    printf("Number of records in file: "); // Print line count before the first three lines
 
-while (fgets(line, buffer_size, input))
-    {   
-        tokeniseRecord(line,",",date,time,steps);
-      
-        strcpy(data[counter].date,date);
-        strcpy(data[counter].time,time);
-        data [counter].steps = atoi(steps);
-        counter ++;
+    while (fgets(line, buffer_size, input)) {
+        tokeniseRecord(line, ",", date, time, steps);
 
-        if (counter < 4){
-        printf("%s/%s/%d\n", date, time, atoi(steps));
+        strcpy(data[counter].date, date);
+        strcpy(data[counter].time, time);
+        data[counter].steps = atoi(steps);
+        counter++;
+
+        if (counter <= 3) {
+            printf("%s/%s/%d\n", date, time, atoi(steps));
         }
+    }
 
-    }    
-    
+    printf("%d\n", counter); // Print the final line count
 
-fclose(input);
+    fclose(input);
 
-printf("Number of records in file: %d\n", counter);
-
-return 0; 
+    return 0;
 }
-
 
