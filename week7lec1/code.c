@@ -86,27 +86,68 @@ int main()
 
         case 'C':
         case 'c':
-            return 0;
+            counter = 0;
+            while (fgets(line, buffer_size, input))
+            {
+                // split up the line and store it in the right place
+                // using the & operator to pass in a pointer to the bloodIron so it stores it
+                tokeniseRecord(line, ",", daily_readings[counter].date, &daily_readings[counter].bloodIron);
+                mean += daily_readings[counter].bloodIron;
+                counter++;
+            }
             break;
 
         case 'D':
         case 'd':
-            return 0;
+            counter = 0;
+            while (fgets(line, buffer_size, input))
+            {
+                // split up the line and store it in the right place
+                // using the & operator to pass in a pointer to the bloodIron so it stores it
+                tokeniseRecord(line, ",", daily_readings[counter].date, &daily_readings[counter].bloodIron);
+                mean += daily_readings[counter].bloodIron;
+                counter++;
+            }
+        
             break;
 
         case 'E':
         case 'e':
-            return 0;
+            counter = 0;
+            while (fgets(line, buffer_size, input))
+            {
+                // split up the line and store it in the right place
+                // using the & operator to pass in a pointer to the bloodIron so it stores it
+                tokeniseRecord(line, ",", daily_readings[counter].date, &daily_readings[counter].bloodIron);
+                mean += daily_readings[counter].bloodIron;
+                counter++;
+            }
             break;
 
         case 'F':
         case 'f':
-            return 0;
+            counter = 0;
+            while (fgets(line, buffer_size, input))
+            {
+                // split up the line and store it in the right place
+                // using the & operator to pass in a pointer to the bloodIron so it stores it
+                tokeniseRecord(line, ",", daily_readings[counter].date, &daily_readings[counter].bloodIron);
+                mean += daily_readings[counter].bloodIron;
+                counter++;
+            }
             break;
 
         case 'G':
         case 'g':
-            return 0;
+            counter = 0;
+            while (fgets(line, buffer_size, input))
+            {
+                // split up the line and store it in the right place
+                // using the & operator to pass in a pointer to the bloodIron so it stores it
+                tokeniseRecord(line, ",", daily_readings[counter].date, &daily_readings[counter].bloodIron);
+                mean += daily_readings[counter].bloodIron;
+                counter++;
+            }
             break;
 
         case 'Q':
