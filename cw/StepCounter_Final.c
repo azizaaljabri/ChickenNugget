@@ -60,30 +60,41 @@ int main() {
 
     switch (option)
     {
-    case "A":
-        printf("input filename:")
-        break;
+        case 'A':
+        case 'a':
+            break;
 
-    case "B":
-        break;
+        case 'B':
+        case 'b':
+            break;
 
-    case "C":
-        break;
+        case 'C':
+        case 'c':
+            break;
 
-    case "D":
-        break;
+        case 'D':
+        case 'd':
+            break;
 
-    case "E":
-        break; 
+        case 'E':
+        case 'e':
+            break;
 
-    case "F":
-        break;
+        case 'F':
+        case 'f':
+            break;
 
-    case "Q":
-        break;      
-    
-    default:
-        break;
+        case 'G':
+        case 'g':
+            break;
+
+        case 'Q':
+        case 'q':
+            return 0;
+            break;
+        default:
+            printf("Invalid choice\n");
+            break;
     }
 
    return 0;
