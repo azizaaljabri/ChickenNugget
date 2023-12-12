@@ -102,7 +102,7 @@ int main() {
 
         case 'B':
         case 'b':
-        printf("Number of records in file: %d\n", counter);
+        printf("Total records: %d\n", counter);
 
             break;
 
@@ -154,8 +154,8 @@ int main() {
         totalSteps += atoi(steps);
         }
 
-        int mean = totalSteps / counter;
-        printf("Mean step count: %d\n", mean);
+        float mean = totalSteps / counter;
+        printf("Mean step count: %.0f\n", mean);
         break;
 
           case 'F':
