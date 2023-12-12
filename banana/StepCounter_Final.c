@@ -151,7 +151,7 @@ int main() {
         {
         tokeniseRecord(line, ",", date, time, steps);
 
-        totalSteps += atoi(steps);
+        totalSteps += atof(steps);
         }
 
         float mean = totalSteps / counter;
