@@ -154,7 +154,7 @@ int main() {
         totalSteps += atoi(steps);
         }
 
-        int mean = (totalSteps + counter -1) / counter;
+        int mean = totalSteps / counter;
         printf("Mean step count: %d\n", mean);
         break;
 
