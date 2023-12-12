@@ -64,7 +64,7 @@ int main() {
     char maxTime[6];
 
     //E
-    int totalSteps = 0;
+    int total = 0;
 
     while (1)
     {   printf("Menu Options:\n");
@@ -151,10 +151,9 @@ int main() {
         {
         tokeniseRecord(line, ",", date, time, steps);
 
-        totalSteps += atof(steps);
+        total += atoi(steps);
         }
-
-        float mean = totalSteps / counter;
+        float mean = (float)total / counter;
         printf("Mean step count: %.0f\n", mean);
         break;
 
