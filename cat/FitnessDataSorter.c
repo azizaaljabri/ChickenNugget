@@ -43,7 +43,7 @@ int main() {
 
     //making sure a filename is given
     if (file == NULL) {
-        fprintf(stderr, "Error opening file\n");
+        printf("Error opening file\n");
         return 1; 
     }
  
@@ -58,14 +58,6 @@ int main() {
         int steps;
 
         tokeniseRecord(line, ',', date, time, &steps);
-
-        //validation
-        if (strlen(date) != 10 || strlen(time) != 5) 
-        {
-            fclose(file);
-            printf("Wrong File Format\n");
-            return 1;
-        }
     
         count++;
     }
